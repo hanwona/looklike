@@ -1,0 +1,4 @@
+const photos=['photo-1521572163474-6864f9cf17ab','photo-1551488831-00ddcb6c6bd3','photo-1541099649105-f69ad21f3246','photo-1591047139829-d91aecb6caea','photo-1576566588028-4147f3842f27','photo-1539109136881-3be0616acf4b','photo-1542272604-787c3835535d','photo-1529139574466-a303027c1d8b'];
+const titles=['에센셜 코튼 오버핏 티셔츠','시그니처 워시드 데님 재킷','클래식 와이드 데님 팬츠','미니멀 투웨이 블루종','소프트 라운드 니트','데일리 크롭 카디건','스트레이트 핏 데님','모던 테일러드 셋업 재킷'];
+const malls=['브랜드 공식몰','29CM','W Concept','스마트스토어','디자이너 편집숍','오늘의 셀렉트','패션플러스','셀렉트숍'];
+export const demoItems=titles.map((title,i)=>({id:`demo-${i}`,title,mall:malls[i],brand:['MORNING','ORDINARY','LAYER','NOUVEAU'][i%4],image:`https://images.unsplash.com/${photos[i]}?auto=format&fit=crop&w=800&q=80`,price:[23900,69900,45900,89900,39900,32900,52900,109000][i],category:['티셔츠','아우터','팬츠','아우터','니트','카디건','팬츠','재킷'][i],similarity:96-i*3,link:`https://search.shopping.naver.com/search/all?query=${encodeURIComponent(title)}`,demo:true}));
